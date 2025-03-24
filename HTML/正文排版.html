@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题样式</title>
+</head>
+<style>
+    h1{
+        color: #4D4F53;
+    }
+
+    .cls{
+        color: #4D4F53;
+        font-size: 15px; 
+    }
+
+    a{
+        text-decoration: none; /* 设置文本样式 去掉下划线 */
+        color: black;
+    }
+</style>
+<body>
+    <!-- 
+        超链接标签：a
+        属性：
+            href：设置要跳转的资源地址
+            target：打开方式
+                _self：默认值，在当前窗口打开
+                _blank：在新窗口打开
+    -->
+     <img src="./img/news_logo.png" alt="news_logo.png" width="100px" /> <a href="https://gov.sina.com.cn/" target="_self">新浪政务</a>>正文
+
+
+      <h1>微视频：让人民过上幸福生活是头等大事</h1>
+      
+ 
+       <hr>
+
+       <span class="cls" id="timer">2025年03月14日 09:24</span><span><a href="https://tv.cctv.com/" target="_blank"> 央视网 </a></span>
+
+       <hr>
+       <!-- 正文 -->
+        <!-- 视频标签 video
+            src：视频资源地址
+            controls：播放控件 [注意：值和key一样的时候 可以省略值] 
+        -->
+         <video src="./video/news.mp4" controls="controls" width="950px"></video>
+
+         <!-- 换行标签 br -->
+          <!-- <br>
+          <br> -->
+          <!-- 段落标签p -->
+          <p>
+            “制定实施中央八项规定，是我们党在新时代的徙木立信之举，必须常抓不懈、久久为功，十年不够就二十年，二十年不够就三十年，直至真正化风成俗，以优良党风引领社风民风。”二十届中央纪委第二次全体会议上，习近平总书记的这番话，昭示着“解决大党独有难题的清醒和坚定”，更是“作风建设永远在路上”的生动宣告。
+          </p>
+         
+</body>
+</html>
