@@ -19,6 +19,19 @@
         text-decoration: none; /* 设置文本样式 去掉下划线 */
         color: black;
     }
+
+    p{
+        text-indent: 30px; /* 首行缩进 */
+        line-height: 25px; /* 行高 */
+    }
+
+    #editor{
+        text-align: right; /* 文本对齐方式 */
+    }
+
+    #keyword{
+        text-align: left;
+    }
 </style>
 <body>
     <!-- 
@@ -47,13 +60,27 @@
         -->
          <video src="./video/news.mp4" controls="controls" width="950px"></video>
 
+         <!-- 音频标签 audio -->
+          <!-- <audio src="./video/news.mp3" controls="controls"></audio> -->
+
          <!-- 换行标签 br -->
           <!-- <br>
           <br> -->
           <!-- 段落标签p -->
+           <!-- 加粗 b / strong -->
           <p>
-            “制定实施中央八项规定，是我们党在新时代的徙木立信之举，必须常抓不懈、久久为功，十年不够就二十年，二十年不够就三十年，直至真正化风成俗，以优良党风引领社风民风。”二十届中央纪委第二次全体会议上，习近平总书记的这番话，昭示着“解决大党独有难题的清醒和坚定”，更是“作风建设永远在路上”的生动宣告。
+            <b>央视网消息</b>“制定实施中央八项规定，是我们党在新时代的徙木立信之举，必须常抓不懈、久久为功，十年不够就二十年，二十年不够就三十年，直至真正化风成俗，以优良党风引领社风民风。”二十届中央纪委第二次全体会议上，习近平总书记的这番话，昭示着“解决大党独有难题的清醒和坚定”，更是“作风建设永远在路上”的生动宣告。
           </p>
+
+          <img src="./img/girl.jpg" >
+
+          <p id="editor">
+            责任编辑：张全蛋 SN20250314-09:24
+          </p>
+
+          <span id="keyword">
+            <b>关键字</b>：作风建设&nbsp;&nbsp;&nbsp; 中央纪委 中央八项规定
+          </span>
          
 </body>
 </html>
