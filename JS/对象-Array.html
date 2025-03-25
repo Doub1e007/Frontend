@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // 1.定义数组 特点：数组长度可变 类型任意
+        //方式1
+        // let arr = new Array(1,2,3,4,5);
+        //方式2
+        let arr = [1,2,3,4,5]; //长度5
+        arr[10] = 'A';
+
+        //访问数组元素
+        console.log(arr);
+
+        // 2.数组属性 - length
+        console.log('长度：' + arr.length); //11
+        // for(let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+
+        console.log('-------------------------------------------------');
+        
+        // 3.数组方法 -forEach map push pop unshift shift splice
+        // 3.1 forEach 循环变量 --只会遍历有值元素
+        arr.forEach((e)=>{
+            console.log(e);
+        })
+
+        console.log('-------------------------------------------------');
+
+        // 3.2 map 遍历，并返回新数组
+        // let arr2 = arr.map((e)=>{
+        //     return e + 10;
+        // })
+        // console.log(arr2);
+
+        console.log('-------------------------------------------------');
+
+        // 3.3 push pop 末尾添加删除元素
+        // arr.push('B','C','D');
+        // console.log(arr);
+        // arr.pop();
+        // console.log(arr);
+
+        console.log('-------------------------------------------------');
+
+        // 3.4 unshift shift 头部添加删除元素
+        // arr.unshift(100,200,300);
+        // console.log(arr);
+        // arr.shift();
+        // console.log(arr);
+
+        console.log('-------------------------------------------------');
+
+        // 3.5 splice(参数一，参数二) 删除元素 指定从某个位置开始 要删除几个元素
+        //参数一：开始位置 
+        //参数二：删除个数
+        
+        // 假设要删除2,3,4
+        console.log(arr);
+        arr.splice(1,3);
+        console.log(arr);
+    </script>
+</body>
+</html>

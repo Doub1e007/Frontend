@@ -16,11 +16,33 @@
         // alert(age === $age); //true
 
         //类型转换 - 字符串 <-> 数字
-        alert(typeof('10' - 1));
-        alert(typeof('10' + 1));
-        alert(parseInt('123'));
-        alert(parseInt('12A3'));
-        alert(parseInt('A123'));
+        alert(typeof('10' - 1)); //number
+        alert(typeof('10' + 1)); //string
+        alert(parseInt('123')); //123
+        alert(parseInt('12A3'));//12
+        alert(parseInt('A123')); //NaN
+
+        //类型转换 其他类型转为boolean
+        if(0){
+            alert("0 转换成false");
+        }
+        if(NaN){
+            alert("NaN 转换成false");
+        }
+        if(1){
+            alert("除了0和NaN 其他数字都转换成true");
+        }
+
+        if(""){
+            alert("空字符串转换成false");
+        }
+
+        if(null){
+            alert("null转换成false");
+        }
+        if(undefined){
+            alert("undefined转换成false");
+        }
     </script>
 </body>
 </html>
