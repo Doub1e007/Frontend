@@ -63,7 +63,14 @@
         // 分析 JS事件--鼠标离焦事件blur 表单提交时间submit DOM操作
         // 校验用户名
         // 1.获取dom元素
-        document.querySelector('#username').val
+        let input = document.querySelector('#username');
+        let usernameValue = input.value;
+        input.addEventListener('blur',()=>{
+            // 校验用户名的长度
+            if(usernameValue.length < 4 || usernameValue.length > 16){
+                alert("用户名不合法");
+            }
+        })
 
     </script>
 </body>
