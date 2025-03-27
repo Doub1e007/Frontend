@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input{
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tip {
+            color: red;
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 150px;
+        }
+
+        input{
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <h1>用户注册</h1>
+        <form>
+            用户名：
+            <input type="text" id="username" name="username" placeholder="用户名不能为空且长度在4-16" />
+            <span class="tip" id="name_msg"></span><br>
+
+            手机号：
+            <input type="text" id="phone" name="phone" placeholder="手机号不能为空且长度为11位" />
+            <span class="tip" id="phone_msg"></span>
+            <br>
+
+            <input type="submit" value="提交" class="btn">
+            <input type="reset" value="重置" class="btn">
+        </form>
+    </div>
+
+    <!-- 外部脚本 注意 如果js模块化了 导入的时候要添加type为module-->
+    <script type="module" src="./js/check.js"></script>
+</body>
+</html>
