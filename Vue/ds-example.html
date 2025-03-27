@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工信息表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .avatar {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>头像</th>
+                    <th>性别</th>
+                    <th>职位</th>
+                    <th>入职时间</th>
+                    <th>更新时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(user, index) in userList" :key="user.id">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ user.name }}</td>
+                    <td><span v-if="user.image">✅</span></td>
+                    <td>{{ user.gender === 1 ? '男' : '女' }}</td>
+                    <td>{{ getJobTitle(user.job) }}</td>
+                    <td>{{ user.entrydate }}</td>
+                    <td>{{ user.updatetime }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+        
+        createApp({
+            data() {
+                return {
+                    userList: [
+                        {
+                            "id": 1,
+                            "name": "谢逊",
+                            "image": true,
+                            "gender": 1,
+                            "job": 1,
+                            "entrydate": "2023-06-09",
+                            "updatetime": "2023-07-01 00:00:00"
+                        },
+                        {
+                            "id": 2,
+                            "name": "韦一笑",
+                            "image": true,
+                            "gender": 1,
+                            "job": 1,
+                            "entrydate": "2023-06-09",
+                            "updatetime": "2023-07-01 00:00:00"
+                        },
+                        {
+                            "id": 3,
+                            "name": "黛绮丝",
+                            "image": true,
+                            "gender": 2,
+                            "job": 2,
+                            "entrydate": "2023-06-09",
+                            "updatetime": "2023-07-01 00:00:00"
+                        },
+                        {
+                            "id": 4,
+                            "name": "殷天正",
+                            "image": true,
+                            "gender": 1,
+                            "job": 3,
+                            "entrydate": "2023-06-09",
+                            "updatetime": "2023-07-01 00:00:00"
+                        }
+                    ]
+                }
+            },
+            methods: {
+                getJobTitle(jobId) {
+                    const jobs = {
+                        1: '普通员工',
+                        2: '部门主管',
+                        3: '经理'
+                    };
+                    return jobs[jobId] || '未知职位';
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
