@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  首页展示
+  <!-- <img src="../../assets/index.png" alt=""> -->
+    <img src="@/assets/index.png" alt="">
 </template>
 
 <style scoped>

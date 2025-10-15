@@ -1,4 +1,6 @@
 <script setup>
+import { RouterView } from 'vue-router';
+
 
 </script>
 
@@ -21,12 +23,12 @@
                 <!-- 左侧菜单 -->
                 <el-aside width="200px" class="aside">
                     <el-scrollbar>
-                        <el-menu>
+                        <el-menu router>
                             <!-- 首页菜单 -->
                             <el-menu-item index="/index">
                                 <el-icon>
                                     <Promotion />
-                                </el-icon> 首页
+                                </el-icon> <RouterLink to="/index">首页</RouterLink>
                             </el-menu-item>
 
                             <!-- 班级管理菜单 -->
@@ -34,17 +36,17 @@
                                 <template #title>
                                     <el-icon>
                                         <Menu />
-                                    </el-icon> 班级学员管理
+                                    </el-icon> <RouterLink to="/index">班级学员管理</RouterLink>
                                 </template>
                                 <el-menu-item index="/clazz">
                                     <el-icon>
                                         <HomeFilled />
-                                    </el-icon>班级管理
+                                    </el-icon> <RouterLink to="/index">班级管理</RouterLink>
                                 </el-menu-item>
                                 <el-menu-item index="/stu">
                                     <el-icon>
                                         <UserFilled />
-                                    </el-icon>学员管理
+                                    </el-icon><RouterLink to="/index">学员管理</RouterLink>
                                 </el-menu-item>
                             </el-sub-menu>
 
@@ -53,17 +55,17 @@
                                 <template #title>
                                     <el-icon>
                                         <Tools />
-                                    </el-icon>系统信息管理
+                                    </el-icon><RouterLink to="/index">系统信息管理</RouterLink>
                                 </template>
                                 <el-menu-item index="/dept">
                                     <el-icon>
                                         <HelpFilled />
-                                    </el-icon>部门管理
+                                    </el-icon><RouterLink to="/index">部门管理</RouterLink>
                                 </el-menu-item>
                                 <el-menu-item index="/emp">
                                     <el-icon>
                                         <Avatar />
-                                    </el-icon>员工管理
+                                    </el-icon><RouterLink to="/index">员工管理</RouterLink>
                                 </el-menu-item>
                             </el-sub-menu>
 
@@ -72,22 +74,22 @@
                                 <template #title>
                                     <el-icon>
                                         <Histogram />
-                                    </el-icon>数据统计管理
+                                    </el-icon><RouterLink to="/index">数据统计管理</RouterLink>
                                 </template>
                                 <el-menu-item index="/empReport">
                                     <el-icon>
                                         <InfoFilled />
-                                    </el-icon>员工信息统计
+                                    </el-icon><RouterLink to="/index">员工信息统计</RouterLink>
                                 </el-menu-item>
                                 <el-menu-item index="/stuReport">
                                     <el-icon>
                                         <Share />
-                                    </el-icon>学员信息统计
+                                    </el-icon><RouterLink to="/index">学员信息统计</RouterLink>
                                 </el-menu-item>
                                 <el-menu-item index="/log">
                                     <el-icon>
                                         <Document />
-                                    </el-icon>日志信息统计
+                                    </el-icon><RouterLink to="/index">日志信息统计</RouterLink>
                                 </el-menu-item>
                             </el-sub-menu>
                         </el-menu>
@@ -95,7 +97,9 @@
                 </el-aside>
 
                 <!-- 主区域 -->
-                <el-main>Main</el-main>
+                <el-main>
+                    <RouterView></RouterView>
+                </el-main>
             </el-container>
         </el-container>
     </div>
@@ -121,7 +125,7 @@
 }
 
 a {
-    color: #fff;
+    color: #0a0202;
     text-decoration: none;
 }
 </style>
